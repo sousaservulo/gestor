@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/login.css" media="screen" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="dist/js/propeller.min.js"></script>
+        <script type="text/javascript" language="javascript" src="datetimepicker/js/moment-with-locales.js"></script>
+        <script type="text/javascript" language="javascript" src="datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <title>Gestor de Atividades</title>
+    </head>
+
+    <body >
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+            <a class="navbar-brand" href="#" style="padding: 10px;">Gestor de Atividades</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav justify-content-end" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal2">Cadastrar Atividades</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">Gerenciar Atividades</a>
+                  <div class="dropdown-menu dropleft" >
+                    <a class="dropdown-item" href="#">Ativas</a>
+                    <a class="dropdown-item" href="#">Canceladas</a>
+                    <a class="dropdown-item" href="#">Arquivadas</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Sair</a>
+                </li>
+              </ul>
+            </div>  
+          </nav>
+          
+          <div class="outro">
+            <br>
+            <div class="row" style="margin:20px;padding-left: 20px;">
+                <div class="col-sm-3">
+                  <div class="card mb-3 border border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sistema 	Pequi</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Atualizar Sistema</h6>
+                      <p class="card-text">Cliente solicitou atualizar o sistema para atender os requisitos da LGPD. </p>
+                      <p class="card-text">Data inicio: 12/05/2021<br> Data fim: 13/05/2021</p>
+                      <p class="card-text">Link da atividade: <a href="#" class="card-link">Repositório</a></p>
+                      <div class="form-group">
+                        <label for="comment">comentario: </label>
+                        <textarea class="form-control" rows="2" id="comment"></textarea>
+                      </div>
+                      
+                      <p class="card-text">Progresso da atividade:</p>
+                      <div style="margin-top: 3px;margin-bottom: 3px;"class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 97%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">97%</div>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary" id="detalhe" data-toggle="modal" data-target="#myModal">Detalhes</button>
+                        <button type="button" class="btn btn-secondary" id="atualizar"data-toggle="modal" data-target="#myModal3">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal4">Concluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-sm-3">
+                  <div class="card mb-3 border border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sistema Sapuva</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Implementar API</h6>
+                      <p class="card-text">Cliente solicitou uma API para terceiros.</p>
+                      <p class="card-text">Data inicio: 13/05/2021<br> Data fim: 14/05/2021</p>
+                      <p class="card-text">Link da atividade: <a href="#" class="card-link">Repositório</a></p>
+                      <div class="form-group">
+                        <label for="comment">comentario: </label>
+                        <textarea class="form-control" rows="2" id="comment"></textarea>
+                      </div>
+                      
+                      <p class="card-text">Progresso da atividade:</p>
+                      <div style="margin-top: 3px;margin-bottom: 3px;"class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 72%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">72%</div>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary" id="detalhe" data-toggle="modal" data-target="#myModal">Detalhes</button>
+                        <button type="button" class="btn btn-secondary" id="atualizar"data-toggle="modal" data-target="#myModal3">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal4">Concluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-3">
+                  <div class="card mb-3 border border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sistema Angelim</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Implementar guia Y</h6>
+                      <p class="card-text">Cliente solicitou uma guia para tratar de vendas especificas.</p>
+                      <p class="card-text">Data inicio: 03/02/2021<br> Data fim: 04/05/2021</p>
+                      <p class="card-text">Link da atividade: <a href="#" class="card-link">Repositório</a></p>
+                      <div class="form-group">
+                        <label for="comment">comentario: </label>
+                        <textarea class="form-control" rows="2" id="comment"></textarea>
+                      </div>
+                      
+                      <p class="card-text">Progresso da atividade:</p>
+                      <div style="margin-top: 3px;margin-bottom: 3px;"class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 42%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">42%</div>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary" id="detalhe" data-toggle="modal" data-target="#myModal">Detalhes</button>
+                        <button type="button" class="btn btn-secondary" id="atualizar"data-toggle="modal" data-target="#myModal3">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal4">Concluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="card mb-3 border border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sistema Ingá </h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Correção de erro</h6>
+                      <p class="card-text">Cliente informou um erro ao gerar relatório e lentidão no sistema.</p>
+                      <p class="card-text">Data inicio: 13/05/2021<br> Data fim: 14/05/2021</p>
+                      <p class="card-text">Link da atividade: <a href="#" class="card-link">Repositório</a></p>
+                      <div class="form-group">
+                        <label for="comment">comentario: </label>
+                        <textarea class="form-control" rows="2" id="comment"></textarea>
+                      </div>
+                      
+                      <p class="card-text">Progresso da atividade:</p>
+                      <div style="margin-top: 3px;margin-bottom: 3px;"class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 7%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">7%</div>
+                      </div>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary" id="detalhe" data-toggle="modal" data-target="#myModal">Detalhes</button>
+                        <button type="button" class="btn btn-secondary" id="atualizar"data-toggle="modal" data-target="#myModal3">Atualizar</button>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal4">Concluir</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+          </div>
+
+                
+
+
+
+                <!--Modal Dos detalhes-->
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Detalhe da atividade</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <h5 class="card-title">Sistema A</h5>
+                        <p class="card-text">Orçamento: $xxxxxxxx</p>
+                        <p class="card-text">Cliente: Zoza</p>
+                        <p class="card-text">Contato: (xx)xxxxxxxxx</p>
+                  
+                       <p class="card-text"></p>
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">Anexos</label>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <!--Modal do cadastro-->
+                <div class="modal fade" id="myModal2">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h6 class="modal-title">Cadastrar Nova Atividade</h6>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="Atividade">Atividade:</label>
+                          <input type="text" class="form-control inputsm" id="atividade" value="Atividade">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="Atividade">Descrição:</label>
+                          <input type="text" class="form-control inputsm" id="atividade">
+                        </div>
+                        </div>
+                        <input type="text" class="form-control inputsm" value="02-16-2012">
+                        <input type="text" class="form-control inputsm" value="02-16-2012">
+
+                        <div class="form-group">
+                              <label for="exampleFormControlFile1">Anexo: <br></label>
+                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </div>
+                      
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+                        </div>
+                     </div> 
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Modal botão atualizar -->
+                <div class="modal fade" id="myModal3">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h6 class="modal-title">Confirmação de atualização</h6>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <p class="card-text">Confirma a atualização da atividade?</p>
+                          <label class="radio-inline"><input type="radio" name="optradio" > Não </label>
+                          <label class="radio-inline"><input type="radio" name="optradio"> Sim </label>
+                          
+                        </div>
+                      
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+                        </div>
+                     </div> 
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal botão concluir -->
+                <div class="modal fade" id="myModal4">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h6 class="modal-title">Confirmação de encerramento</h6>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                      </div>
+                      
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <p class="card-text">Confirma a conclusão da atividade?</p>
+                          <label class="radio-inline"><input type="radio" name="optradio" > Não </label>
+                          <label class="radio-inline"><input type="radio" name="optradio"> Sim </label>
+                          
+                        </div>
+                      </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Concluir</button>
+                        </div>
+                     </div> 
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  $(document).ready(function(){
+                    $("#myBtn").click(function(){
+                      $("#myModal").modal();
+                    });
+                  });
+
+                  $(document).ready(function(){
+                    $("#myBtn2").click(function(){
+                      $("#myModal2").modal();
+                    });
+                  });
+
+                  $(document).ready(function(){
+                    $("#myBtn3").click(function(){
+                      $("#myModal3").modal();
+                    });
+                  });
+
+                  $(document).ready(function(){
+                    $("#myBtn3").click(function(){
+                      $("#myModal4").modal();
+                    });
+                  });
+
+                  // Linked date and time picker 
+	                // start date date and time picker 
+                    $('#datepicker-start').datetimepicker();
+
+                  // End date date and time picker 
+                  $('#datepicker-end').datetimepicker({
+                    useCurrent: false 
+                  });
+
+                  // start date picke on chagne event [select minimun date for end date datepicker]
+                  $("#datepicker-start").on("dp.change", function (e) {
+                    $('#datepicker-end').data("DateTimePicker").minDate(e.date);
+                  });
+                  // Start date picke on chagne event [select maxmimum date for start date datepicker]
+                  $("#datepicker-end").on("dp.change", function (e) {
+                    $('#datepicker-start').data("DateTimePicker").maxDate(e.date);
+                  });
+                </script>
+                  
+    </body>
+</html>
